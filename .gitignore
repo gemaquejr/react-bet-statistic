@@ -1,0 +1,21 @@
+# Dependências do Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Configurações locais
+.env
+.DS_Store
+
+# Logs
+logs
+*.log
+logs/*
+
+# Diretórios temporários
+tmp/
+dist/
+
+# Arquivos do sistema operacional
+Thumbs.db
