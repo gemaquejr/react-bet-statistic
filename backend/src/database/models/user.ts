@@ -1,9 +1,10 @@
 import { DataTypes, Model } from "sequelize";
-import sequelize from "../config/database";
+import db from ".";
 
 class User extends Model {
   public id!: number;
   public username!: string;
+  public role!: string;
   public email!: string;
   public password!: string;
 }
@@ -19,6 +20,10 @@ User.init({
     type: DataTypes.STRING,
     allowNull: false,
   },
+  role: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   email: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -29,7 +34,7 @@ User.init({
   },
 }, {
   underscored: true,
-  sequelize,
+  sequelize: db,
   modelName: 'users',
   timestamps: false,
 });
