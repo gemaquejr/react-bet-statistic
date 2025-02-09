@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "src/server.ts",
   "scripts": {
+    "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "dev": "nodemon --watch ./src --ext ts,json --exec ts-node ./src/server.ts",
     "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
