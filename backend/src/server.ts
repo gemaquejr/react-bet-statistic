@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import userRouter from './routes/userRoute';
 import betRouter from './routes/betRoute'
 import championshipRouter from './routes/championshipRoute'
+import gameRouter from './routes/gameRoute'
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ app.use(cors());
 app.use('/', userRouter);
 app.use('/', betRouter);
 app.use('/', championshipRouter);
+app.use('/', gameRouter);
 
 const PORT = process.env.PORT;
 
