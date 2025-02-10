@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import userRouter from './routes/userRoute';
 import betRouter from './routes/betRoute'
+import championshipRouter from './routes/championshipRoute'
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ app.use(cors());
 
 app.use('/', userRouter);
 app.use('/', betRouter);
+app.use('/', championshipRouter);
 
 const PORT = process.env.PORT;
 
